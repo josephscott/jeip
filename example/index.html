@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>jQuery Edit In Place</title>
+	<style type="text/css">
+		.jeip-saving {
+			background-image: url( 'ajax-loader.gif' );
+			background-repeat: no-repeat;
+			background-position: left;
+			background-color: #903;
+			color: #fff;
+			padding: 0 2px 0 20px;
+		}
+
+		.jeip-mouseover, .jeip-editfield {
+			background-color: #ffff99;
+		}
+
+		.jeip-savebutton {
+			background-color: #36f;
+			color: #fff;
+		}
+
+		.jeip-cancelbutton {
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+<h1>jQuery Edit In Place (JEIP)</h1>
+
+<b>Examples</b>
+<hr />
+
+<span id="text-edit">Text edit</span>
+
+<br />
+
+<span id="textarea-edit">Textarea edit - <b>Iñtërnâtiônàlizætiøn</b></span>
+
+<br />
+
+Select form, what is your favorite color: <span id="select-edit">Blue</span>
+
+
+<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="../jeip.js"></script>
+<script type="text/javascript">
+	$( "#text-edit" ).eip( "save.php", { select_text: true } );
+	$( "#textarea-edit" ).eip( "save.php", { 
+		form_type: "textarea"
+	} );
+	$( "#select-edit" ).eip( "save.php", {
+		form_type: "select",
+		select_options: {
+			blue	: "Blue",
+			green	: "Green",
+			red		: "Red",
+			black	: "Black",
+			brown	: "Brown",
+			white	: "White"
+		}
+	} );
+</script>
+
+</body>
+</html>

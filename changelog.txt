@@ -1,0 +1,19 @@
+jQuery Edit In Place (JEIP)
+Change Log
+
+0.2.0 -
+	- Fix typo for default value of start_select_form (Alex)
+
+0.1.2 - 15 Nov 2008
+	- Group all of the edit activity into it's own function to make it easier
+	  turn the click event off and on.  
+	- Fixes the problem with multiple edit fields showing up for one element 
+	  when clicked on multiple times in rapid succession. (reported by
+	  du yu - http://blog.sina.com.cn/duyuor)
+
+0.1.1 - 7 Nov 2008
+	- Only focus the edit form if the option is set
+	- Make the select_text option work
+
+0.1.0 - 5 Nov 2008
+	- Initial port of Prototype based edit in place code
