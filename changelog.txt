@@ -1,8 +1,9 @@
 jQuery Edit In Place (JEIP)
 Change Log
 
-0.2.0 -
-	- Fix typo for default value of start_select_form (Alex)
+0.2.0 - 19 Feb 2013
+	- Fix typo for default value of start_select_form ( Alex )
+	- Fix for jQuery 1.9 ( Justin Hall )
 
 0.1.2 - 15 Nov 2008
 	- Group all of the edit activity into it's own function to make it easier

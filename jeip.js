@@ -21,7 +21,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-// version: 0.1.2
+// version: 0.2.0
 
 (function( $ ) {
 	$.fn.eip = function( save_url, options ) {
@@ -243,7 +243,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		
 		var _saveEdit = function( self, orig_option_value ) {
 			var orig_value = $( self ).html( );
-			var new_value = $( "#edit-" + self.id ).attr( "value" );
+			var new_value = $( "#edit-" + self.id ).prop( "value" );
 
 			if( orig_value == new_value ) {
 				$( "#editor-" + self.id ).fadeOut( "fast" );
@@ -273,7 +273,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 				id			: self.id,
 				form_type	: opt.form_type,
 				orig_value	: orig_value,
-				new_value	: $( "#edit-" + self.id ).attr( "value" ),
+				new_value	: $( "#edit-" + self.id ).prop( "value" ),
 				data		: opt.data
 			}
 
